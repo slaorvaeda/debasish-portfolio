@@ -7,7 +7,7 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center overflow-hidden">
       <div className="relative w-full h-full flex items-center justify-center px-6 py-32">
         {/* Centered DEBASHISH text with profile */}
-        <div className="relative flex items-center justify-center">
+        <div className="scale-90 relative flex items-center justify-center">
           {/* Profile silhouette positioned behind BA letters - centered */}
           <div className="absolute left-1/2 top-1/2 -translate-x-[68%] -translate-y-1/2 w-[28rem] h-[28rem] md:w-[32rem] md:h-[32rem] lg:w-[36rem] lg:h-[36rem] xl:w-[40rem] xl:h-[40rem] 2xl:w-[44rem] 2xl:h-[44rem] z-0" data-aos="zoom-in" data-aos-duration="1500">
             <div className="w-full h-full relative">
