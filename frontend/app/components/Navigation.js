@@ -102,10 +102,10 @@ export default function Navigation() {
 
         {/* Right - Email */}
         <a
-          href="mailto:debashish@mail.com"
+          href="mailto: debashish@yugayatraretail.com"
           className="text-white font-sans text-sm md:text-base hover:opacity-80 transition-opacity"
         >
-          say hi — debashish@mail.com
+          Say Hi — Debashish@yugayatraretail.com 
         </a>
       </div>
 
