@@ -138,3 +138,33 @@ html {
 .pulse-animation-center {
   animation: pulseWithCenter 2s ease-in-out infinite;
 }
+
+/* Responsive text stroke for Hero */
+@media (min-width: 640px) {
+  #home h1 span[style*="transparent"] {
+    -webkit-text-stroke: 1.5px white !important;
+    text-stroke: 1.5px white !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #home h1 span[style*="transparent"] {
+    -webkit-text-stroke: 2px white !important;
+    text-stroke: 2px white !important;
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.7;
+  }
+}
+
+.animate-scroll-bounce {
+  animation: scrollBounce 2s ease-in-out infinite;
+}

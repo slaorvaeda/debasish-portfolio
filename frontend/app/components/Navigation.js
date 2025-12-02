@@ -60,24 +60,24 @@ export default function Navigation() {
         ? 'bg-black/95 backdrop-blur-md shadow-lg' 
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-12 py-3 sm:py-4 md:py-6 flex justify-between items-center gap-2 sm:gap-4 overflow-hidden">
         {/* Left - Name with registered symbol */}
         <a 
           href="#home" 
           onClick={(e) => handleNavClick(e, 'home')}
-          className="text-white font-sans text-base md:text-lg hover:opacity-80 transition-opacity cursor-pointer"
+          className="text-white font-sans text-xs sm:text-sm md:text-base lg:text-lg hover:opacity-80 transition-opacity cursor-pointer flex-shrink-0 whitespace-nowrap"
         >
           Debashis®
         </a>
         
         {/* Center - Hamburger Menu */}
         <button
-          className="text-white hover:opacity-80 transition-opacity"
+          className="text-white hover:opacity-80 transition-opacity flex-shrink-0"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
           <svg
-            className="w-6 h-6"
+            className="w-5 h-5 sm:w-6 sm:h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -103,22 +103,28 @@ export default function Navigation() {
         {/* Right - Email */}
         <a
           href="mailto:debashis@mail.com"
-          className="text-white font-sans text-sm md:text-base hover:opacity-80 transition-opacity"
+          className="text-white font-sans text-[10px] xs:text-xs sm:text-sm md:text-base hover:opacity-80 transition-opacity hidden sm:inline-block flex-shrink-0 whitespace-nowrap"
         >
           say hi — debashis@mail.com
+        </a>
+        <a
+          href="mailto:debashis@mail.com"
+          className="text-white font-sans text-[10px] xs:text-xs hover:opacity-80 transition-opacity sm:hidden flex-shrink-0 whitespace-nowrap"
+        >
+          email
         </a>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="bg-black/98 backdrop-blur-md border-t border-gray-800">
-          <ul className="px-6 py-4 space-y-4">
+          <ul className="px-4 sm:px-6 py-4 space-y-3 sm:space-y-4">
             {navItems.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
                   onClick={(e) => handleNavClick(e, item.id)}
-                  className={`block text-white text-base font-medium transition-colors hover:text-[#ff6b35] ${
+                  className={`block text-white text-sm sm:text-base font-medium transition-colors hover:text-[#ff6b35] ${
                     activeSection === item.id ? 'text-[#ff6b35]' : 'text-white'
                   }`}
                 >

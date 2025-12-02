@@ -34,11 +34,11 @@ export default function CraftingDesigns() {
   ];
 
   return (
-    <section id="about" className="bg-black py-24 px-6 lg:px-12">
+    <section id="about" className="bg-black py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Main Title */}
-        <div className="mb-16" data-aos="fade-up">
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-tight">
+        <div className="mb-8 sm:mb-12 md:mb-16" data-aos="fade-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-serif font-bold leading-tight break-words">
             <span className="text-white">CRAFTING DESIGNS</span>
             <br />
             <span className="text-white">THAT CONNECT PEOP</span>
@@ -46,18 +46,18 @@ export default function CraftingDesigns() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-start mb-12 sm:mb-16 md:mb-20">
           {/* Left side - Statement */}
           <div className="text-white" data-aos="fade-right">
-            <p className="text-xl md:text-2xl font-sans font-light leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-sans font-light leading-relaxed">
               Designing with Purpose. Creating Experiences Measured by Meaningful Impact
             </p>
           </div>
 
           {/* Right side - Profile and Stats */}
-          <div className="space-y-12" data-aos="fade-left">
+          <div className="space-y-8 sm:space-y-10 md:space-y-12" data-aos="fade-left">
             {/* Profile Picture */}
-            <div className="relative w-48 h-48 md:w-64 md:h-64">
+            <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 mx-auto lg:mx-0">
               <div className="absolute inset-0 border-4 border-[#ff6b35] z-10"></div>
               <div className="absolute inset-4 overflow-hidden">
                 <Image
@@ -71,13 +71,13 @@ export default function CraftingDesigns() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
               {stats.map((stat, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="text-4xl md:text-5xl font-bold text-[#ff6b35]">
+                <div key={index} className="space-y-1 sm:space-y-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#ff6b35]">
                     {stat.number}
                   </div>
-                  <div className="text-white text-sm md:text-base font-sans">
+                  <div className="text-white text-xs sm:text-sm md:text-base font-sans">
                     {stat.label}
                   </div>
                 </div>
@@ -87,13 +87,13 @@ export default function CraftingDesigns() {
         </div>
 
         {/* Industry Polaroids */}
-        <div className="flex flex-wrap gap-6 justify-center items-center mt-20">
+        <div className="flex flex-wrap gap-4 sm:gap-6 justify-center items-center mt-12 sm:mt-16 md:mt-20">
           {industries.map((industry, index) => (
             <div
               key={index}
               data-aos="zoom-in"
               data-aos-delay={index * 100}
-              className="relative w-48 h-56 bg-white p-2 transform hover:rotate-0 transition-transform duration-300 shadow-lg"
+              className="relative w-32 h-40 sm:w-40 sm:h-48 md:w-48 md:h-56 bg-white p-2 transform hover:rotate-0 transition-transform duration-300 shadow-lg"
               style={{
                 transform: `rotate(${index % 2 === 0 ? '-5deg' : '5deg'})`,
               }}
@@ -106,7 +106,7 @@ export default function CraftingDesigns() {
                   className="object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-white/95 px-2 py-1">
-                  <div className="text-black text-xs font-bold text-center">
+                  <div className="text-black text-[10px] sm:text-xs font-bold text-center break-words line-clamp-2">
                     {industry.name}
                   </div>
                 </div>
